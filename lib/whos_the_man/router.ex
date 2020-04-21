@@ -6,6 +6,7 @@ defmodule WhosTheMan.Router do
 
   get "/" do
     # IO.inspect(conn)
+    IO.puts("Got a request!")
     IO.inspect(conn.params)
 
     conn
