@@ -32,3 +32,7 @@
 - to view the logs: `heroku logs --tail -a qux`
 - now visit your app at [https://qux.herokuapp.com/foo?a=1&b=2](https://qux.herokuapp.com/foo?a=1&b=2)
 - your logs should show the visit
+
+## Sources
+
+I used code from [this blogpost](https://medium.com/@qhwa_85848/build-docker-images-from-an-elixir-project-why-and-how-78e19468210).
