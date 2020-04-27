@@ -21,5 +21,5 @@ ENV MIX_ENV=${mix_env}
 COPY --from=builder /app /app
 WORKDIR /app
 
-ENTRYPOINT ["/app/bin/whos_the_man"]
+ENTRYPOINT ["/app/bin/simple_json_app"]
 CMD ["start"]
