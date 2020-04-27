@@ -21,8 +21,5 @@ ENV MIX_ENV=${mix_env}
 COPY --from=builder /app /app
 WORKDIR /app
 
-ENV PORT ${PORT:-4000}
-EXPOSE $PORT
-
 ENTRYPOINT ["/app/bin/whos_the_man"]
 CMD ["start"]
