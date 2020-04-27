@@ -1,5 +1,6 @@
 defmodule WhosTheMan.EndPoint do
   use Plug.Router
+  require Logger
 
   plug(:match)
 
@@ -14,7 +15,7 @@ defmodule WhosTheMan.EndPoint do
   forward("/foo", to: WhosTheMan.Router)
 
   match _ do
-    IO.puts("Got bad request")
+    Logger.info("Got bad request")
     send_resp(conn, 404, "Requested page not found, yo")
   end
 
@@ -26,6 +27,9 @@ defmodule WhosTheMan.EndPoint do
   end
 
   def start_link(_opts) do
-    Plug.Cowboy.http(__MODULE__, [])
+    with {:ok, port} <- Application.fetch_env(:whos_the_man, :port) do
+      Logger.info("Starting server at http://localhost:#{port}/")
+      Plug.Cowboy.http(__MODULE__, [], port: port)
+    end
   end
 end
