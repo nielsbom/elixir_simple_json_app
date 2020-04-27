@@ -1,2 +1,2 @@
 import Config
-config :whos_the_man, :port, (System.fetch_env!("PORT") || "4000") |> String.to_integer()
+config :simple_json_app, :port, (System.fetch_env!("PORT") || "4000") |> String.to_integer()

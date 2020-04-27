@@ -1,9 +1,9 @@
-defmodule WhosTheMan.MixProject do
+defmodule SimpleJsonApp.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :whos_the_man,
+      app: :simple_json_app,
       version: "0.1.0",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
@@ -15,7 +15,7 @@ defmodule WhosTheMan.MixProject do
   def application do
     [
       extra_applications: [:logger],
-      mod: {WhosTheMan.Application, []}
+      mod: {SimpleJsonApp.Application, []}
     ]
   end
 

@@ -1,6 +1,6 @@
-defmodule WhosTheMan do
+defmodule SimpleJsonApp do
   @moduledoc """
-  Documentation for `WhosTheMan`.
+  Documentation for `SimpleJsonApp`.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule WhosTheMan do
 
   ## Examples
 
-      iex> WhosTheMan.hello()
+      iex> SimpleJsonApp.hello()
       :world
 
   """

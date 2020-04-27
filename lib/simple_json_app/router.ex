@@ -1,4 +1,4 @@
-defmodule WhosTheMan.Router do
+defmodule SimpleJsonApp.Router do
   use Plug.Router
 
   plug(:match)

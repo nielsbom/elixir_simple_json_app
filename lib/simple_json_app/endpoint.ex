@@ -1,4 +1,4 @@
-defmodule WhosTheMan.EndPoint do
+defmodule SimpleJsonApp.EndPoint do
   use Plug.Router
   require Logger
 
@@ -12,7 +12,7 @@ defmodule WhosTheMan.EndPoint do
 
   plug(:dispatch)
 
-  forward("/foo", to: WhosTheMan.Router)
+  forward("/foo", to: SimpleJsonApp.Router)
 
   match _ do
     Logger.info("Got bad request")
@@ -27,7 +27,7 @@ defmodule WhosTheMan.EndPoint do
   end
 
   def start_link(_opts) do
-    with {:ok, port} <- Application.fetch_env(:whos_the_man, :port) do
+    with {:ok, port} <- Application.fetch_env(:simple_json_app, :port) do
       Logger.info("Starting server at http://localhost:#{port}/")
       Plug.Cowboy.http(__MODULE__, [], port: port)
     end

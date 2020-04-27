@@ -1,8 +1,8 @@
-defmodule WhosTheManTest do
+defmodule SimpleJsonAppTest do
   use ExUnit.Case
-  doctest WhosTheMan
+  doctest SimpleJsonApp
 
   test "greets the world" do
-    assert WhosTheMan.hello() == :world
+    assert SimpleJsonApp.hello() == :world
   end
 end
